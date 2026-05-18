@@ -16,15 +16,21 @@ function range(inicio, final = false) {
 }
 
 function crearEstrellas() {
+  const guardar = [];
   range(10).forEach(() => {
     const estrella = document.createElement("div");
     estrella.innerText = "⭐️";
     estrella.classList.add("star");
-    estrella.style.top = Math.floor(Math.random() * 100) + 1;
-    estrella.style.left = Math.floor(Math.random() * 100) + 1;
-
+    estrella.style.top = Math.floor(Math.random() * 100) + 1 + "%";
+    estrella.style.left = Math.floor(Math.random() * 100) + 1 + "%";
     estrellaContainer.appendChild(estrella);
+    guardar.push(estrella);
   });
+  setTimeout(() => {
+    guardar.forEach((star) => {
+      star.remove();
+    });
+  }, 2000);
 }
 
 btn.addEventListener("click", crearEstrellas);

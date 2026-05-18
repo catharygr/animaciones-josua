@@ -28,4 +28,16 @@ a {
 .star {
   position: absolute;
   color: antiquewhite;
+  font-size: 2rem;
+  animation: trasicionEstrella 2000ms;
+}
+
+@keyframes trasicionEstrella {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
