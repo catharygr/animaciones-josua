@@ -26,5 +26,6 @@ a {
 }
 
 .star {
+  position: absolute;
   color: antiquewhite;
 }

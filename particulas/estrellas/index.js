@@ -20,6 +20,8 @@ function crearEstrellas() {
     const estrella = document.createElement("div");
     estrella.innerText = "⭐️";
     estrella.classList.add("star");
+    estrella.style.top = Math.floor(Math.random() * 100) + 1;
+    estrella.style.left = Math.floor(Math.random() * 100) + 1;
 
     estrellaContainer.appendChild(estrella);
   });
