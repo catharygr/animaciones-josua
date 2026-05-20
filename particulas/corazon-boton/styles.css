@@ -72,5 +72,5 @@ body {
   border-radius: 50%;
   animation:
     desaparecer 2000ms forwards,
-    expandir 200ms;
+    expandir 500ms;
 }
