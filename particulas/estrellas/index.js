@@ -18,11 +18,15 @@ function range(inicio, final = false) {
 function crearEstrellas() {
   const guardar = [];
   range(10).forEach(() => {
+    const top = Math.floor(Math.random() * 101);
+    const left = Math.floor(Math.random() * 101);
     const estrella = document.createElement("div");
     estrella.innerText = "⭐️";
     estrella.classList.add("star");
-    estrella.style.top = Math.floor(Math.random() * 100) + 1 + "%";
-    estrella.style.left = Math.floor(Math.random() * 100) + 1 + "%";
+    estrella.style.top = top + "%";
+    estrella.style.left = left + "%";
+    // Este código de abajo es para que no haya desvordamiento y no tener que usar overflow
+    estrella.style.transform = `translate(${-left}%, ${top * -1}%)`;
     estrellaContainer.appendChild(estrella);
     guardar.push(estrella);
   });
