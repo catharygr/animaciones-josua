@@ -45,5 +45,6 @@ main h1 {
 }
 .emoji {
   transform: translateY(-100%);
-  animation: lluvias 1000ms;
+  /* animation: lluvias 4000ms;
+  animation-delay: 1000ms; */
 }
