@@ -12,10 +12,7 @@ main {
   overflow: clip;
   padding-bottom: 32px;
 }
-.emojiWrapper {
-  position: relative;
-  background: hsl(350deg 50% 92%);
-}
+
 .avatar {
   position: relative;
   width: 128px;
@@ -32,11 +29,21 @@ main h1 {
   margin-block: 16px;
 }
 .emojiWrapper {
+  position: relative;
   display: flex;
   justify-content: space-evenly;
   height: 120px;
   font-size: 2rem;
+  background: hsl(350deg 50% 92%);
+  overflow: hidden;
+}
+
+@keyframes lluvias {
+  to {
+    transform: translateY(140px);
+  }
 }
 .emoji {
-  /* TODO */
+  transform: translateY(-100%);
+  animation: lluvias 1000ms;
 }
