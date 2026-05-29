@@ -1,7 +1,25 @@
 const todosLosEmojis = document.querySelectorAll(".emoji");
-console.log(todosLosEmojis);
+const emojiWrapper = document.querySelector(".emojiWrapper");
+const emojis = [
+  "💨",
+  "👀",
+  "❤️",
+  "💕",
+  "🍄",
+  "🍇",
+  "🥵",
+  "🍄",
+  "🏖️",
+  "🚴🏼‍♀️",
+  "⛵️",
+];
 
-todosLosEmojis.forEach((emoji) => {
-  emoji.style.animation = `lluvias ${_.random(2000, 4000)}ms infinite`;
-  emoji.style.animationDelay = `${_.random(2000)}ms`;
+_.range(10).forEach((num) => {
+  const div = document.createElement("div");
+  div.classList.add("emoji");
+  div.innerHTML = `${emojis[num]}`;
+  div.style.animation = `lluvias ${_.random(2000, 4000)}ms infinite linear`;
+  div.style.animationDelay = `${_.random(2000)}ms`;
+  emojiWrapper.appendChild(div);
 });
+console.log(todosLosEmojis);
