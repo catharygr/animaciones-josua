@@ -22,4 +22,3 @@ _.range(10).forEach((num) => {
   div.style.animationDelay = `${_.random(2000)}ms`;
   emojiWrapper.appendChild(div);
 });
-console.log(todosLosEmojis);
